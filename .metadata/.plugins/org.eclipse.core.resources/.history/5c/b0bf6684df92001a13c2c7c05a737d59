@@ -1,0 +1,27 @@
+#ifndef PUBLICIDAD_H_
+#define PUBLICIDAD_H_
+
+#define GHOST_LEN 50
+#define GHOST1_LEN 20
+
+typedef struct
+{
+	char nombre[GHOST_LEN];
+	char dni[GHOST1_LEN];
+	float altura;
+	int isEmpty;
+	int id;
+}Publicidad;
+
+int cli_imprimir(Publicidad* auxProducto);
+int cli_inicializarArray(Publicidad* array,int limite);
+int cli_altaArray(Publicidad* array,int limite, int indice, int* id);
+int cli_getEmptyIndex(Publicidad* array,int limite);
+int cli_imprimirArray(Publicidad* array,int limite);
+int cli_buscarId(Publicidad array[], int limite, int valorBuscado);
+int cli_modificarArray(Publicidad* array,int limite, int indice);
+int cli_bajaArray(Publicidad* array,int limite, int indice);
+int cli_ordenarPorNombre(Publicidad* array,int limite);
+int cli_ordenarPorNombreAltura(Publicidad* array,int limite);
+
+#endif /* PUBLICIDAD_H_ */

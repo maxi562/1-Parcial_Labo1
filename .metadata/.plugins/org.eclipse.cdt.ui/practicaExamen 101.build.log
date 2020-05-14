@@ -1,0 +1,11 @@
+01:58:15 **** Rebuild of configuration Debug for project practicaExamen 101 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/publicidad.o ../src/publicidad.c 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src/practicaExamen 101.o" "../src/practicaExamen 101.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/pantalla.o ../src/pantalla.c 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/utn.o ../src/utn.c 
+gcc -o "practicaExamen 101.exe" src/pantalla.o "src/practicaExamen 101.o" src/publicidad.o src/utn.o 
+
+01:58:17 Build Finished. 0 errors, 0 warnings. (took 1s.884ms)
+

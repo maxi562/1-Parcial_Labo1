@@ -1,0 +1,17 @@
+/*
+ * Informes.h
+ *
+ *  Created on: 10 may. 2020
+ *      Author: maximiliano
+ */
+
+#ifndef INFORMES_H_
+#define INFORMES_H_
+
+#include "Cliente.h"
+#include "Publicidad.h"
+
+int info_imprimirClientePublicacion(Cliente* array,int limite, int* idCliente);
+
+
+#endif /* INFORMES_H_ */

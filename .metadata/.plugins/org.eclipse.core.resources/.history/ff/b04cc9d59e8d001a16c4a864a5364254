@@ -1,0 +1,43 @@
+/*
+ ============================================================================
+ Name        : Prueba_nuevas_funciones.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+#include <string.h>
+
+int utn_getEmail(char pResultado*,char*mensaje,char*mensajeError,int reintentos);
+
+int main(void) {
+
+
+	return EXIT_SUCCESS;
+}
+
+
+
+
+int utn_getEmail(char pResultado*,char*mensaje,char*mensajeError,int reintentos)
+{
+	char bufferAux[4096];
+	int retorno = -1;
+
+	while(reintentos>=0)
+	{
+
+
+
+	}
+
+	return retorno;
+
+}
+
+

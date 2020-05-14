@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/maximiliano/Escritorio/Workspace_Fantasma/ParcialPantallasClase12 2"/>
+			<item value="/home/maximiliano/Escritorio/Workspace_Fantasma/Parcial1/practica examen101"/>
+			<item value="/home/maximiliano/Escritorio/Workspace_Fantasma"/>
+			<item value="/home/maximiliano/Escritorio/RR/Clase10_RESUELTO.zip (Unzipped Files)/Clase10_INICIAL/src"/>
+			<item value="/home/maximiliano/Escritorio/Clase10_RESUELTO.zip (Unzipped Files)-20200430T230609Z-001/Clase10_RESUELTO.zip (Unzipped Files)/Clase10_INICIAL/src"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,265 @@
+/*
+ * Informes.c
+ *
+ *  Created on: 10 may. 2020
+ *      Author: maximiliano
+ */
+#include "Informes.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "Publicidad.h"
+#include "utn.h"
+#include "Cliente.h"
+
+static const char ESTADO_PUBLICACION [10][12]= {"PAUSADA", "ACTIVA"};
+
+int info_imprimirClientePublicacion(Publicidad* array,int limitePubli, int idPublicidad,Cliente* arrayCli, int limiteCli)
+{
+	int retorno = -1;
+	int i;
+	int bufferAuxiliar;
+	int j;
+
+	for(i=0;i < limitePubli;i++)
+	{
+		if(i == idPublicidad)
+		{
+			bufferAuxiliar = array[i].idCliente;
+
+		for(j=0;j<limiteCli;j++)
+		{
+			if(j == bufferAuxiliar)
+			{
+				printf("\nID: %d - Nombre: %s - Apellido: %s - Cuit: %s",arrayCli[j].id,arrayCli[j].nombre,arrayCli[j].apellido,arrayCli[j].cuit);
+				break;
+			}
+		}
+		}
+
+	}
+
+	return retorno;
+}
+
+int info_imprimirClientesConPublicacionesActivas(Cliente* arrayCliente,int limiteCli,Publicidad* arrayPubli,int limitePubli)
+{
+	int retorno = -1;
+	int i;
+	int contadorPublicaciones = 0;
+	int j;
+
+	if(arrayCliente != NULL && limiteCli>0 && arrayPubli != NULL && limitePubli>0)
+	{
+
+	for(i=0;i<limiteCli;i++)
+	{
+		if(arrayCliente[i].isEmpty!=1)
+		{
+			for(j=0;j<limitePubli;j++)
+			{
+				if(i == arrayPubli[j].idCliente && arrayPubli[j].isEmpty!=1 &&arrayPubli[j].estado==1)
+				{
+					contadorPublicaciones++;
+				}
+
+			}
+			printf("\nID: %d - Nombre: %s - Apellido: %s - Cuit: %s - Publicidades Activas: %d",arrayCliente[i].id,
+					arrayCliente[i].nombre, arrayCliente[i].apellido,arrayCliente[i].cuit,contadorPublicaciones);
+			contadorPublicaciones = 0;
+
+		}
+
+			retorno = 0;
+
+	}
+	}
+
+
+
+
+	return retorno;
+}
+
+int info_imprimirPublicacionesConCuit(Publicidad* arrayPub,int limitePub,Cliente* arrayCli,int limiteCli)
+{
+	int retorno=-1;
+	int i;
+	int j;
+
+	for(i=0;i<limitePub;i++)
+	{
+		if(arrayPub[i].isEmpty != 1)
+		{
+			for(j=0;j<limiteCli;j++)
+			{
+				if(arrayPub[i].idCliente==arrayCli[j].id && arrayCli[j].isEmpty !=1)
+				{
+					printf("\nID: %d - Texto: %s - Rubro: %s - Estado: %s - IDCliente: %d - CuitCliente: %s",arrayPub[i].id,arrayPub[i].textoAviso,
+							arrayPub[i].rubro,ESTADO_PUBLICACION[arrayPub[i].estado],arrayPub[i].idCliente,arrayCli[j].cuit);
+
+				}
+			}
+		}
+		retorno = 0;
+	}
+
+
+	return retorno;
+}
+
+int info_clienteConMasPublicidadesActivas(Cliente* arrayCliente,int limiteCli,Publicidad* arrayPubli,int limitePubli)
+{
+	int retorno = -1;
+	int i;
+	int contadorPublicaciones = 0;
+	int j;
+	int flag = 1;
+	Cliente bufferCuit;
+	int maximoPublicaciones;
+
+		if(arrayCliente != NULL && limiteCli>0 && arrayPubli != NULL && limitePubli>0)
+		{
+
+		for(i=0;i<limiteCli;i++)
+		{
+			if(arrayCliente[i].isEmpty!=1)
+			{
+				for(j=0;j<limitePubli;j++)
+				{
+					if(i == arrayPubli[j].idCliente && arrayPubli[j].isEmpty!=1 &&arrayPubli[j].estado==1)
+					{
+						contadorPublicaciones++;
+					}
+					if(flag==1 || contadorPublicaciones > maximoPublicaciones)
+					{
+						flag = 0;
+						maximoPublicaciones = contadorPublicaciones;
+						bufferCuit = arrayCliente[i];
+					}
+
+				}
+				contadorPublicaciones = 0;
+
+			}
+		}
+		printf("\nEl cliente con mas publicaciones activas (%d) es :\n Nombre: %s - Apellido: %s - Cuit: %s",
+				maximoPublicaciones,bufferCuit.nombre,bufferCuit.apellido,bufferCuit.cuit);
+		retorno = 0;
+		}
+
+	return retorno;
+}
+
+int info_clienteConMasPublicidadesPausadas(Cliente* arrayCliente,int limiteCli,Publicidad* arrayPubli,int limitePubli)
+{
+	int retorno = -1;
+	int i;
+	int contadorPublicaciones = 0;
+	int j;
+	int flag = 1;
+	Cliente bufferCuit;
+	int maxPublicacionesPausa;
+
+		if(arrayCliente != NULL && limiteCli>0 && arrayPubli != NULL && limitePubli>0)
+		{
+
+		for(i=0;i<limiteCli;i++)
+		{
+			if(arrayCliente[i].isEmpty!=1)
+			{
+				for(j=0;j<limitePubli;j++)
+				{
+					if(i == arrayPubli[j].idCliente && arrayPubli[j].isEmpty!=1 &&arrayPubli[j].estado==0)
+					{
+						contadorPublicaciones++;
+					}
+					if(flag==1 || contadorPublicaciones > maxPublicacionesPausa)
+					{
+						flag = 0;
+						maxPublicacionesPausa = contadorPublicaciones;
+						bufferCuit = arrayCliente[i];
+					}
+
+				}
+				contadorPublicaciones = 0;
+
+			}
+		}
+		printf("\nEl cliente con mas publicaciones pausadas (%d) es :\n Nombre: %s - Apellido: %s - Cuit: %s",
+				maxPublicacionesPausa,bufferCuit.nombre,bufferCuit.apellido,bufferCuit.cuit);
+		retorno = 0;
+		}
+
+
+	return retorno;
+
+}
+
+int info_clienteConMasPublicidades(Cliente* arrayCliente,int limiteCli,Publicidad* arrayPubli,int limitePubli)
+{
+	int retorno = -1;
+	int i;
+	int contadorPublicaciones = 0;
+	int j;
+	int flag = 1;
+	Cliente bufferCuit;
+	int maxPublicaciones;
+
+		if(arrayCliente != NULL && limiteCli>0 && arrayPubli != NULL && limitePubli>0)
+		{
+
+		for(i=0;i<limiteCli;i++)
+		{
+			if(arrayCliente[i].isEmpty!=1)
+			{
+				for(j=0;j<limitePubli;j++)
+				{
+					if(i == arrayPubli[j].idCliente && arrayPubli[j].isEmpty!=1)
+					{
+						contadorPublicaciones++;
+					}
+					if(flag==1 || contadorPublicaciones > maxPublicaciones)
+					{
+						flag = 0;
+						maxPublicaciones = contadorPublicaciones;
+						bufferCuit = arrayCliente[i];
+					}
+
+				}
+				contadorPublicaciones = 0;
+
+			}
+		}
+		printf("\nEl cliente con mas publicaciones (%d) es :\n Nombre: %s - Apellido: %s - Cuit: %s",
+				maxPublicaciones,bufferCuit.nombre,bufferCuit.apellido,bufferCuit.cuit);
+		retorno = 0;
+		}
+
+
+	return retorno;
+
+}
+
+int info_cantidadDePublicacionesPorRubro(Publicidad* array, int limite)
+{
+	int retorno=-1;
+	char valorBuscado[20];
+	int i;
+	int contadorRubros=0;
+	utn_getDescripcion(valorBuscado,20,"\nIndique Rubro a buscar","Rubro no encontrado",2);
+
+	for(i=0;i<limite;i++)
+	{
+		if(array[i].isEmpty !=1 && array[i].rubro==valorBuscado)
+		{
+			contadorRubros++;
+		}
+	}
+	printf("La cantidad de publicaciones del Rubro %d es : %d",valorBuscado,contadorRubros);
+	retorno = 0;
+
+
+	return retorno;
+}

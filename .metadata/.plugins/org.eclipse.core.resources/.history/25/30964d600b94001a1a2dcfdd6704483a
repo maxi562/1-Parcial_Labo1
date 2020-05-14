@@ -1,0 +1,193 @@
+/*
+ ============================================================================
+ Name        : Primer_Parcial.c
+ Author      : Maximiliano Ruiz
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+#include <string.h>
+#include "utn.h"
+#include "Cliente.h"
+#include "Publicidad.h"
+#include "Informes.h"
+
+#define CANTIDAD_CLIENTES 100
+#define CANTIDAD_PUBLICIDADES 1000
+
+
+int main(void) {
+
+	Cliente arrayClientes[CANTIDAD_CLIENTES];
+	Publicidad arrayPublicidades[CANTIDAD_PUBLICIDADES];
+
+	int opcion;
+	int idCliente = 0;
+	int indiceAuxiliarCliente;
+	int buscarId;
+	int indiceAuxiliarPublicidad;
+	int idPuclicidad = 0;
+
+	if(!cli_inicializarArray(arrayClientes,CANTIDAD_CLIENTES) &&
+	   !pub_inicializarArray(arrayPublicidades,CANTIDAD_PUBLICIDADES))
+	{
+		printf("Arrays Inicializados OK");
+	}
+
+	cli_altaForzada(arrayClientes,CANTIDAD_CLIENTES,0,&idCliente,"JOSE","GOMEZ","20-32323232-2");
+	cli_altaForzada(arrayClientes,CANTIDAD_CLIENTES,1,&idCliente,"ALFREDO","LOPEZ","28-42424242-5");
+	cli_altaForzada(arrayClientes,CANTIDAD_CLIENTES,2,&idCliente,"LORENA","GONZALEZ","27-52525252-7");
+
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,0,&idPuclicidad,"HOLA","12",1,0);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,1,&idPuclicidad,"CHAU","12",1,0);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,2,&idPuclicidad,"BIEN","24",0,1);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,3,&idPuclicidad,"MAL","24",0,1);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,4,&idPuclicidad,"PEDRO","36",1,2);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,5,&idPuclicidad,"JOSE","36",1,2);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,6,&idPuclicidad,"MANUEL","36",1,2);
+	pub_altaForzada(arrayPublicidades,CANTIDAD_PUBLICIDADES,7,&idPuclicidad,"GERARDO","36",0,2);
+
+
+	do
+	{
+		if(!utn_getNumero(&opcion,
+				"\n1.Alta de cliente"
+				"\n2.Modificar datos de Cliente"
+				"\n3.Baja de Cliente"
+				"\n4.Publicar"
+				"\n5.Pausar Publicacion"
+				"\n6.Reanudar Publicacion"
+				"\n7.Imprimir Clientes"
+				"\n8.Imprimir Publicaciones"
+				"\n9.Informes Clientes"
+				"\nA)Cliente con mas avisos activos"
+				"\nB)Cliente con mas avisos pausados"
+				"\nC)Cliente con mas avisos"
+				"\n10.Cantidad Publicidades por Rubro"
+				"\n11.Rubro con mas publicaciones activas"
+				"\n12.Rubro con menos publicaciones activas","\nOpcion invalida\n",1,12,3))
+		{
+
+			switch(opcion)
+			{
+
+			case 1:
+				indiceAuxiliarCliente = cli_getEmptyIndex(arrayClientes,CANTIDAD_CLIENTES);
+				if(indiceAuxiliarCliente >=0 &&
+				   cli_altaArray(arrayClientes,CANTIDAD_CLIENTES,indiceAuxiliarCliente,&idCliente)==0)
+				{
+					printf("\nAlta realizada con exito\nEl Numero de ID del Cliente es: %d",arrayClientes[indiceAuxiliarCliente].id);
+
+				}
+				else
+				{
+					printf("\nNo queda espacio para màs clientes nuevos\n");
+				}
+				break;
+
+			case 2:
+				cli_imprimirArray(arrayClientes,CANTIDAD_CLIENTES);
+				if(utn_getNumero(&buscarId,"\nIndique nùmero de ID de cliente a modificar\n","\nError, Id no existe\n",0,idCliente,2)==0)
+				{
+					indiceAuxiliarCliente = cli_buscarId(arrayClientes,CANTIDAD_CLIENTES,buscarId);
+					if(indiceAuxiliarCliente >=0 &&
+						cli_modificarArray(arrayClientes,CANTIDAD_CLIENTES,indiceAuxiliarCliente)==0 )
+					{
+						printf("\nModificacion realizada con exito\n");
+					}
+				}
+				break;
+
+			case 3:
+				cli_imprimirArray(arrayClientes,CANTIDAD_CLIENTES);
+				if(utn_getNumero(&buscarId,"\nIndique numero de ID de cliente\n","\nError, Id no existe\n",0,idCliente,2)==0 &&
+				   cli_buscarId(arrayClientes,CANTIDAD_CLIENTES,buscarId) !=-1)
+				{
+					printf("%d",buscarId);
+				}
+				break;
+
+			case 4:
+
+				indiceAuxiliarPublicidad = pub_getEmptyIndex(arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				if(indiceAuxiliarPublicidad >=0)
+				{
+					cli_imprimirArray(arrayClientes,CANTIDAD_CLIENTES);
+				}
+				if(utn_getNumero(&buscarId,"\nIndique numero de ID de cliente\n","\nError, Id no existe\n",0,idCliente,2)==0 &&
+					cli_buscarId(arrayClientes,CANTIDAD_CLIENTES,buscarId) !=-1)
+				{
+					pub_altaArray(arrayPublicidades,CANTIDAD_PUBLICIDADES,indiceAuxiliarPublicidad,&idPuclicidad,&idCliente);
+					printf("\nAlta realizada con exito\nEl Numero de ID de la publicidad es: %d",arrayPublicidades[indiceAuxiliarPublicidad].id);
+				}
+				else
+				{
+					printf("El ID no existe");
+				}
+				break;
+
+			case 5:
+				pub_imprimirArray(arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				if(utn_getNumero(&buscarId,"\nIndique numero de ID de publicacion a pausar\n","\nError, Id no existe\n",0,idPuclicidad,2)==0)
+				{
+					indiceAuxiliarPublicidad = pub_buscarId(arrayPublicidades,CANTIDAD_PUBLICIDADES,buscarId);
+					info_imprimirClientePublicacion(arrayPublicidades,CANTIDAD_PUBLICIDADES,indiceAuxiliarPublicidad,arrayClientes,CANTIDAD_CLIENTES);
+					pub_pausarPublicidad(arrayPublicidades,CANTIDAD_PUBLICIDADES,indiceAuxiliarPublicidad);
+
+				}
+
+				break;
+
+			case 6:
+				pub_imprimirArray(arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				if(utn_getNumero(&buscarId,"\nIndique numero de ID de publicacion a reanudar\n","\nError, Id no existe\n",0,idPuclicidad,2)==0)
+				{
+					indiceAuxiliarPublicidad = pub_buscarId(arrayPublicidades,CANTIDAD_PUBLICIDADES,buscarId);
+					info_imprimirClientePublicacion(arrayPublicidades,CANTIDAD_PUBLICIDADES,indiceAuxiliarPublicidad,arrayClientes,CANTIDAD_CLIENTES);
+					pub_reanudarPublicidad(arrayPublicidades,CANTIDAD_PUBLICIDADES,indiceAuxiliarPublicidad);
+
+				}
+
+				break;
+
+			case 7:
+				info_imprimirClientesConPublicacionesActivas(arrayClientes,CANTIDAD_CLIENTES,arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				break;
+
+			case 8:
+				info_imprimirPublicacionesConCuit(arrayPublicidades,CANTIDAD_PUBLICIDADES,arrayClientes,CANTIDAD_CLIENTES);
+				break;
+
+			case 9:
+				info_clienteConMasPublicidadesActivas(arrayClientes,CANTIDAD_CLIENTES,arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				info_clienteConMasPublicidadesPausadas(arrayClientes,CANTIDAD_CLIENTES,arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				info_clienteConMasPublicidades(arrayClientes,CANTIDAD_CLIENTES,arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				break;
+
+			case 10:
+				info_cantidadDePublicacionesPorRubro(arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				break;
+
+			case 11:
+				info_rubroConMasPublicidades(arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				break;
+
+			case 12:
+				info_rubroConMenosPublicidades(arrayPublicidades,CANTIDAD_PUBLICIDADES);
+				break;
+
+
+
+			}
+		}
+
+	}while(opcion<13);
+
+		return EXIT_SUCCESS;
+
+}

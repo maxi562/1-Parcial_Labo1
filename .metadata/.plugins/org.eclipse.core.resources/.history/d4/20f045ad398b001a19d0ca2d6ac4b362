@@ -1,0 +1,26 @@
+#ifndef GHOST_H_
+#define GHOST_H_
+
+#define NOMBRE_LEN 50
+#define RAZA_LEN 20
+
+typedef struct
+{
+	char nombre[NOMBRE_LEN];
+	char dni[RAZA_LEN];
+	float altura;
+	int isEmpty;
+	int id;
+}Ghost;
+
+int cli_imprimir(Ghost* auxProducto);
+int cli_inicializarArray(Ghost* array,int limite);
+int cli_altaArray(Ghost* array,int limite, int indice, int* id);
+int cli_getEmptyIndex(Ghost* array,int limite);
+int cli_imprimirArray(Ghost* array,int limite);
+int cli_buscarId(Ghost array[], int limite, int valorBuscado);
+int cli_modificarArray(Ghost* array,int limite, int indice);
+int cli_bajaArray(Ghost* array,int limite, int indice);
+int cli_ordenarPorNombre(Ghost* array,int limite);
+
+#endif /* GHOST_H_ */

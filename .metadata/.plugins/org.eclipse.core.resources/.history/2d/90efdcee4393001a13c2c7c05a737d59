@@ -1,0 +1,32 @@
+#ifndef PUBLICIDAD_H_
+#define PUBLICIDAD_H_
+
+#define AVISO_LEN 64
+#define RUBRO_LEN 20
+
+#define ESTADO_ACTIVA 1
+#define ESTADO_PAUSADA 2
+
+typedef struct
+{
+	char textoAviso[AVISO_LEN];
+	char rubro[RUBRO_LEN];
+	int estado;
+	int idCliente;
+	int isEmpty;
+	int id;
+}Publicidad;
+
+int pub_imprimir(Publicidad* auxProducto);
+int pub_inicializarArray(Publicidad* array,int limite);
+int pub_altaArray(Publicidad* array,int limite, int indice, int* id,int* indiceCliente);
+int pub_getEmptyIndex(Publicidad* array,int limite);
+int pub_imprimirArray(Publicidad* array,int limite);
+int pub_buscarId(Publicidad array[], int limite, int valorBuscado);
+int pub_modificarArray(Publicidad* array,int limite, int indice);
+int pub_bajaArray(Publicidad* array,int limite, int indice);
+int pub_ordenarPorNombre(Publicidad* array,int limite);
+int pub_ordenarPorNombreAltura(Publicidad* array,int limite);
+int pub_altaForzada(Publicidad* array,int limite, int indice, int* id,char* aviso,char* rubro,int estado,int idCliente);
+int pub_pausarPublicidad(Publicidad* array,int limite, int indice);
+#endif /* PUBLICIDAD_H_ */

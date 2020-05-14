@@ -1,0 +1,779 @@
+02:02:30 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:02:53 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:02:55 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:13:18 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+In file included from ../src/Cliente.c:5:0:
+../src/Cliente.h:28:74: error: unknown type name ‘Publicidad’
+ int cli_BajaClienteConPublicidades(Cliente* array,int limite, int indice,Publicidad* arrayPub,int limitePub);
+                                                                          ^~~~~~~~~~
+../src/Cliente.c:355:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+make: *** [src/Cliente.o] Error 1
+src/subdir.mk:30: recipe for target 'src/Cliente.o' failed
+"make all" terminated with exit code 2. Build might be incomplete.
+02:14:00 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+../src/Cliente.c:355:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+make: *** [src/Cliente.o] Error 1
+src/subdir.mk:30: recipe for target 'src/Cliente.o' failed
+"make all" terminated with exit code 2. Build might be incomplete.
+02:14:19 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building file: ../src/Informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informes.d" -MT"src/Informes.o" -o "src/Informes.o" "../src/Informes.c"
+Finished building: ../src/Informes.c
+ 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+Finished building: ../src/Primer_Parcial.c
+ 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:91:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:98:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:136:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:268:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:14:26 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:23:41 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:23:43 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:25:33 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:25:35 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:28:34 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+../src/Primer_Parcial.c: In function ‘main’:
+../src/Primer_Parcial.c:110:78: warning: passing argument 3 of ‘pub_listaPublicacionesCliente’ makes integer from pointer without a cast [-Wint-conversion]
+        pub_listaPublicacionesCliente(arrayPublicidades,CANTIDAD_PUBLICIDADES,&buscarId) !=-1)
+                                                                              ^
+In file included from ../src/Cliente.h:7:0,
+                 from ../src/Primer_Parcial.c:16:
+../src/Publicidad.h:33:5: note: expected ‘int’ but argument is of type ‘int *’
+ int pub_listaPublicacionesCliente(Publicidad* array,int limite,int valorBuscado);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:28:41 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:28:43 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:29:28 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Primer_Parcial.c
+../src/Primer_Parcial.c: In function ‘main’:
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+../src/Primer_Parcial.c:110:78: warning: passing argument 3 of ‘pub_listaPublicacionesCliente’ makes integer from pointer without a cast [-Wint-conversion]
+        pub_listaPublicacionesCliente(arrayPublicidades,CANTIDAD_PUBLICIDADES,&buscarId) !=-1)
+                                                                              ^
+In file included from ../src/Cliente.h:7:0,
+                 from ../src/Primer_Parcial.c:16:
+../src/Publicidad.h:33:5: note: expected ‘int’ but argument is of type ‘int *’
+ int pub_listaPublicacionesCliente(Publicidad* array,int limite,int valorBuscado);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Primer_Parcial.c:112:69: warning: passing argument 3 of ‘cli_BajaClienteConPublicidades’ makes integer from pointer without a cast [-Wint-conversion]
+      cli_BajaClienteConPublicidades(arrayClientes,CANTIDAD_CLIENTES,&buscarId,arrayPublicidades,CANTIDAD_PUBLICIDADES);
+                                                                     ^
+In file included from ../src/Primer_Parcial.c:16:0:
+../src/Cliente.h:29:5: note: expected ‘int’ but argument is of type ‘int *’
+ int cli_BajaClienteConPublicidades(Cliente* array,int limite, int indice,Publicidad* arrayPub,int limitePub);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:29:30 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:29:32 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:32:41 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:32:45 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:34:31 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:91:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:98:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:136:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:268:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:34:33 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:34:34 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:38:09 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:91:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:98:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:136:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:268:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:38:13 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:38:15 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:40:24 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:40:26 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:43:24 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:43:26 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+02:48:07 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:91:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:98:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:136:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:268:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+02:48:10 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:56:30 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informes.d" -MT"src/Informes.o" -o "src/Informes.o" "../src/Informes.c"
+Finished building: ../src/Informes.c
+ 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_imprimir’:
+../src/Publicidad.c:23:85: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘const char *’ [-Wformat=]
+   printf("\nID: %d -El texto del aviso es: %s -Rubro %s -Estado de la Publicacion: %d -Id CLiente: %d",pElemento->id,pElemento->textoAviso,pElemento->rubro,ESTADO_PUBLICACION[pElemento->estado],pElemento->idCliente);
+                                                                                    ~^                                                                       ~~~~~~~~~~~~~~~~~~
+                                                                                    %s
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:91:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:98:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:136:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:268:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+17:56:36 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:57:19 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:57:21 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:58:16 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_imprimir’:
+../src/Publicidad.c:23:85: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘const char *’ [-Wformat=]
+   printf("\nID: %d -El texto del aviso es: %s -Rubro %s -Estado de la Publicacion: %d -Id CLiente: %d",pElemento->id,pElemento->textoAviso,pElemento->rubro,ESTADO_PUBLICACION[pElemento->estado],pElemento->idCliente);
+                                                                                    ~^                                                                       ~~~~~~~~~~~~~~~~~~
+                                                                                    %s
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:91:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:98:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:136:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:268:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+17:58:18 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:58:20 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:59:32 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_imprimir’:
+../src/Publicidad.c:23:85: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘const char *’ [-Wformat=]
+   printf("\nID: %d -El texto del aviso es: %s -Rubro %s -Estado de la Publicacion: %d -Id CLiente: %d",pElemento->id,
+                                                                                    ~^
+                                                                                    %s
+     pElemento->textoAviso,pElemento->rubro,ESTADO_PUBLICACION[pElemento->estado],pElemento->idCliente);
+                                            ~~~~~~~~~~~~~~~~~~                        
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:92:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:99:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:137:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:269:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+17:59:34 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:59:36 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:00:34 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:92:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:99:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:137:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:269:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+../src/Publicidad.c:9:19: warning: ‘ESTADO_PUBLICACION’ defined but not used [-Wunused-const-variable=]
+ static const char ESTADO_PUBLICACION [10][12]= {"PAUSADA", "ACTIVA"};
+                   ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:01:31 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:92:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:99:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:137:1: warning: "/*" within comment [-Wcomment]
+ /**
+  
+../src/Publicidad.c:9:19: warning: ‘ESTADO_PUBLICACION’ defined but not used [-Wunused-const-variable=]
+ static const char ESTADO_PUBLICACION [10][12]= {"PAUSADA", "ACTIVA"};
+                   ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:02:28 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:92:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:99:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+At top level:
+../src/Publicidad.c:9:19: warning: ‘ESTADO_PUBLICACION’ defined but not used [-Wunused-const-variable=]
+ static const char ESTADO_PUBLICACION [10][12]= {"PAUSADA", "ACTIVA"};
+                   ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:03:07 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:03:24 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:03:26 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:10:13 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informes.d" -MT"src/Informes.o" -o "src/Informes.o" "../src/Informes.c"
+Finished building: ../src/Informes.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:10:15 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:12:16 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:12:18 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:15:27 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building file: ../src/Informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informes.d" -MT"src/Informes.o" -o "src/Informes.o" "../src/Informes.c"
+Finished building: ../src/Informes.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:15:30 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:16:07 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:92:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^~~~~~~~~~~~~
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:99:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:16:18 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:19:37 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:19:39 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:20:44 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:20:47 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:24:04 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:92:18: warning: passing argument 1 of ‘utn_getNumero’ from incompatible pointer type [-Wincompatible-pointer-types]
+    utn_getNumero(&bufferCliente.rubro,"Indique Rubro","Rubro Incorrecto",0,1000000,2) == 0 &&
+                  ^
+In file included from ../src/Publicidad.c:6:0:
+../src/utn.h:11:5: note: expected ‘int *’ but argument is of type ‘char (*)[20]’
+ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+     ^~~~~~~~~~~~~
+../src/Publicidad.c:99:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:24:13 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:24:14 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:29:31 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:100:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = indiceCliente;
+                            ^
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:29:37 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:29:59 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:30:15 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:31:02 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘pub_altaArray’:
+../src/Publicidad.c:100:28: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    bufferCliente.idCliente = &indiceCliente;
+                            ^
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:31:10 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:31:12 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:32:56 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:32:59 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:34:54 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+Building file: ../src/Primer_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Primer_Parcial.d" -MT"src/Primer_Parcial.o" -o "src/Primer_Parcial.o" "../src/Primer_Parcial.c"
+Finished building: ../src/Primer_Parcial.c
+ 
+Building target: Primer_Parcial
+Invoking: GCC C Linker
+gcc  -o "Primer_Parcial"  ./src/Cliente.o ./src/Informes.o ./src/Primer_Parcial.o ./src/Publicidad.o ./src/utn.o   
+Finished building target: Primer_Parcial
+ 
+18:34:56 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:59:10 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:07:01 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:10:45 **** Incremental Build of configuration Debug for project Primer_Parcial ****
+make all 
+make: No se hace nada para 'all'.

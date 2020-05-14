@@ -1,0 +1,25 @@
+20:33:29 **** Build of configuration Debug for project Fantasma_UTN ****
+make all 
+Building file: ../src/Fantasma_UTN.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fantasma_UTN.d" -MT"src/Fantasma_UTN.o" -o "src/Fantasma_UTN.o" "../src/Fantasma_UTN.c"
+Finished building: ../src/Fantasma_UTN.c
+ 
+Building file: ../src/Ghost.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Ghost.d" -MT"src/Ghost.o" -o "src/Ghost.o" "../src/Ghost.c"
+Finished building: ../src/Ghost.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: Fantasma_UTN
+Invoking: GCC C Linker
+gcc  -o "Fantasma_UTN"  ./src/Fantasma_UTN.o ./src/Ghost.o ./src/utn.o   
+Finished building target: Fantasma_UTN
+ 
+
+20:33:29 Build Finished. 0 errors, 0 warnings. (took 388ms)
+
